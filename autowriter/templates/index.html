@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Автописатель</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <p class="eyebrow">Черновик</p>
+      <h1>Автописатель</h1>
+      <p class="lead">Вставьте фрагмент. Число символов считается в браузере и никуда не отправляется.</p>
+    </header>
+
+    <section class="sheet" aria-labelledby="fragment-label">
+      <label id="fragment-label" for="fragment">Фрагмент</label>
+      <textarea
+        id="fragment"
+        name="fragment"
+        rows="12"
+        placeholder="Вставьте текст сюда…"
+        spellcheck="true"
+      ></textarea>
+      <div class="toolbar">
+        <p id="char-count" class="count" aria-live="polite">Символов: 0</p>
+        <button type="button" id="check-button">Проверить текст</button>
+      </div>
+      <p id="notice" class="notice" role="status" hidden></p>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
